@@ -1,0 +1,38 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add new expense</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="addExpense()">
+                <div class="mb-3">
+                  <label for="type" class="form-label">Type</label>
+                  <ng-select
+                    [items]="expenseTypes"
+                    placeholder="Select Type"
+                    [multiple]="false"
+                    name="type"
+                    [(ngModel)]="addExpenseRequest.type">
+                </ng-select>
+                </div>
+                <div class="mb-3">
+                    <label for="dateTime" class="form-label">dateTime</label>
+                    <input type="datetime" class="form-control" id="dateTime" name="dateTime" [(ngModel)]="addExpenseRequest.dateTime">
+                  </div>
+                  <div class="mb-3">
+                    <label for="total" class="form-label">total</label>
+                    <input type="number" class="form-control" id="total" name="total" [(ngModel)]="addExpenseRequest.total">
+                  </div>
+                  <div class="mb-3">
+                    <label for="paidBy" class="form-label">paidBy</label>
+                    <ng-select
+                    [items]="usersNames"
+                    placeholder="Select someone"
+                    [multiple]="false"
+                    name="type"
+                    [(ngModel)]="addExpenseRequest.paidBy">
+                  </ng-select>
+                  </div> 
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>

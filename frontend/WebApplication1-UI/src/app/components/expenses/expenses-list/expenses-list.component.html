@@ -1,0 +1,26 @@
+
+<div class="container my-5">
+    <h2  class="mb-3">Expenses</h2>
+    <table class="responsive-table" *ngIf="expenses && expenses.length > 0">
+        <thead class="table-header">
+          <tr>
+            <th>type</th>
+            <th>dateTime</th>
+            <th>total</th>
+            <th>paidBy</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="table-row">
+          <tr *ngFor="let expense of expenses">
+            <td class="col col-1" >{{expense.type}}</td>
+            <td class="col col-2">{{expense.dateTime}}</td>
+            <td class="col col-3">{{expense.total}}</td>
+            <td class="col col-4">{{expense.paidBy}}</td>
+            <td class="col col-6"><button type="button" class="btn"><a [routerLink]="['/expenses', 'update', expense.expenseId]">Update</a></button>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="!expenses || expenses.length <= 0"> No expenses were found</p>
+      <button type="button" class="btn"><a [routerLink]="['/expenses/add']">Add new expense</a></button>
+</div>

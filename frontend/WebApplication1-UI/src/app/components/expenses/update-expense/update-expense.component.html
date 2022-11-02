@@ -1,0 +1,44 @@
+<div class="container my-5">
+    <h1 class="mb-3">Update expense</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updateExpense()">
+                <div class="mb-3">
+                    <label for="expenseId" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="expenseId" readonly name="expenseId" [(ngModel)]="expenseDetails.expenseId">
+                  </div>
+                <div class="mb-3">
+                  <label for="type" class="form-label">type</label>
+                  <ng-select
+                    [items]="expenseTypes"
+                    placeholder="Select Type"
+                    [multiple]="false"
+                    name="type"
+                    [(ngModel)]="expenseDetails.type">
+                </ng-select>
+                </div>
+                <div class="mb-3">
+                    <label for="dateTime" class="form-label">dateTime</label>
+                    <input type="datetime" class="form-control" id="dateTime" name="dateTime" [(ngModel)]="expenseDetails.dateTime">
+                  </div>
+                <div class="mb-3">
+                    <label for="total" class="form-label">total</label>
+                    <input type="number" class="form-control" id="total" name="total" [(ngModel)]="expenseDetails.total">
+                  </div>
+                  <div class="mb-3">
+                    <label for="paidBy" class="form-label">paidBy</label>
+                    <ng-select
+                    [items]="usersNames"
+                    placeholder="Select someone"
+                    [multiple]="false"
+                    name="type"
+                    [(ngModel)]="expenseDetails.paidBy">
+                  </ng-select>
+                                  </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-danger" (click)="deleteExpense(expenseDetails.expenseId)">Delete</button>
+
+              </form>
+        </div>
+    </div>
+</div>
