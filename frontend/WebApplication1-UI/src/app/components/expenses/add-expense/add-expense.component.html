@@ -4,7 +4,7 @@
         <div class="col-6">
             <form #form="ngForm" (ngSubmit)="addExpense()">
                 <div class="mb-3">
-                  <label for="type" class="form-label">Type</label>
+                  <label for="type" class="form-label">Type of expense</label>
                   <ng-select
                     [items]="expenseTypes"
                     placeholder="Select Type"
@@ -14,15 +14,15 @@
                 </ng-select>
                 </div>
                 <div class="mb-3">
-                    <label for="dateTime" class="form-label">dateTime</label>
-                    <input type="date" class="form-control" id="dateTime" name="dateTime" [(ngModel)]="addExpenseRequest.dateTime">
+                    <label for="dateTime" class="form-label">Date of event</label>
+                    <input type="date" class="form-control" id="dateTime" name="dateTime" [(ngModel)]="addExpenseRequest.dateTime" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="100DKK">
                   </div>
                   <div class="mb-3">
-                    <label for="total" class="form-label">total</label>
+                    <label for="total" class="form-label">Total</label>
                     <input type="number" class="form-control" id="total" name="total" [(ngModel)]="addExpenseRequest.total">
                   </div>
                   <div class="mb-3">
-                    <label for="paidBy" class="form-label">paidBy</label>
+                    <label for="paidBy" class="form-label">Who's paying?</label>
                     <ng-select
                     [items]="usersNames"
                     placeholder="Select someone"

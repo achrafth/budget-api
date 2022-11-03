@@ -4,11 +4,7 @@
         <div class="col-6">
             <form #form="ngForm" (ngSubmit)="updateExpense()">
                 <div class="mb-3">
-                    <label for="expenseId" class="form-label">Id</label>
-                    <input type="text" class="form-control" id="expenseId" readonly name="expenseId" [(ngModel)]="expenseDetails.expenseId">
-                  </div>
-                <div class="mb-3">
-                  <label for="type" class="form-label">type</label>
+                  <label for="type" class="form-label">Type of expense</label>
                   <ng-select
                     [items]="expenseTypes"
                     placeholder="Select Type"
@@ -18,15 +14,15 @@
                 </ng-select>
                 </div>
                 <div class="mb-3">
-                    <label for="dateTime" class="form-label">dateTime</label>
+                    <label for="dateTime" class="form-label">Date of event</label>
                     <input type="datetime" class="form-control" id="dateTime" name="dateTime" [(ngModel)]="expenseDetails.dateTime">
                   </div>
                 <div class="mb-3">
-                    <label for="total" class="form-label">total</label>
+                    <label for="total" class="form-label">Total</label>
                     <input type="number" class="form-control" id="total" name="total" [(ngModel)]="expenseDetails.total">
                   </div>
                   <div class="mb-3">
-                    <label for="paidBy" class="form-label">paidBy</label>
+                    <label for="paidBy" class="form-label">Who's paying?</label>
                     <ng-select
                     [items]="usersNames"
                     placeholder="Select someone"
