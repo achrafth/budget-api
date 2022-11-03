@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations;
 
 public class CreateUserRequest
 {
-    public Guid Id { get; set; }
     [Required]
     public string FirstName { get; set; }
 

@@ -13,7 +13,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="role" class="form-label">Role</label>
-                    <input type="text" class="form-control" id="role" name="role" [(ngModel)]="addUserRequest.role">
+                    <ng-select
+                    [items]="role"
+                    placeholder="Select Role"
+                    [multiple]="false"
+                    name="role"
+                    [(ngModel)]="addUserRequest.role">
+                </ng-select>
                   </div>
                   <div class="mb-3">
                     <label for="email" class="form-label">Email</label>

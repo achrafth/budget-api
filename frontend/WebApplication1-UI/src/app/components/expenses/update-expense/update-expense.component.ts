@@ -11,7 +11,7 @@ import { UsersService } from 'src/app/Services/users/users.service';
 })
 export class UpdateExpenseComponent implements OnInit {
 
-  expenseTypes = ['FOOD', 'CLOTHES', 'HOTEL', 'TRANSPORT', 'OTHERS'];
+  expenseTypes = ['Food', 'Clothes', 'Transport', 'Others'];
 
   usersNames: string[] = [];
   expenseDetails: Expense = {

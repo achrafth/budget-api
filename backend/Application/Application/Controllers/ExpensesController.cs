@@ -1,5 +1,6 @@
 ﻿namespace Application.Controllers;
 
+using Application.Entities;
 using Application.Helpers;
 using Application.Models.Expenses;
 using Application.Services;
@@ -61,6 +62,8 @@ public class ExpensesController : ControllerBase
             return NotFound();
         }
         user.PaidMoney += model.Total;
+        _context.Users.Update(user);
+        _context.SaveChanges();
         return Ok(user);
     }
 
@@ -79,7 +82,10 @@ public class ExpensesController : ControllerBase
         foreach (var user in users)
         {
             user.Dept = user.PaidMoney - (rollingPaidMoney / users.ToArray().Length);
+            _context.Users.Update(user);
         }
+
+        _context.SaveChanges();
 
         return Ok(users);
     }

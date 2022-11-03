@@ -1,7 +1,7 @@
 
 <div class="container my-5">
     <h2  class="mb-3">Users</h2>
-    <table class="responsive-table" *ngIf="users && users.length > 0">
+    <table  mat-table class="responsive-table" *ngIf="users && users.length > 0">
         <thead class="table-header">
           <tr>
             <th>First Name</th>
@@ -26,4 +26,5 @@
         </tbody>
       </table>
       <p *ngIf="!users || users.length <= 0"> No users were found</p>
+      <button type="button" class="btn"><a [routerLink]="['/users/add']">Add new user</a></button>
 </div>

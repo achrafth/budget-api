@@ -10,6 +10,8 @@ import { UsersService } from 'src/app/Services/users/users.service';
 })
 export class UpdateUserComponent implements OnInit {
 
+  role = ['User', 'Admin'];
+  
   userDetails: User = {
     id: '',
     firstName: '',

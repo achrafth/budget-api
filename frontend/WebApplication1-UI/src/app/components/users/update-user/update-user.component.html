@@ -15,10 +15,15 @@
                 <label for="lastName" class="form-label">Last Name</label>
                 <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="userDetails.lastName">
               </div>
-              <div class="mb-3">
-                  <label for="role" class="form-label">Role</label>
-                  <input type="text" class="form-control" id="role" name="role" [(ngModel)]="userDetails.role">
-                </div>
+                  <div class="mb-3">
+                    <label for="role" class="form-label">Role</label>
+                    <ng-select
+                    [items]="role"
+                    placeholder="Select Role"
+                    [multiple]="false"
+                    name="role"
+                    [(ngModel)]="userDetails.role">
+                </ng-select>    </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
                   <input type="email" class="form-control" id="email" name="email" [(ngModel)]="userDetails.email">

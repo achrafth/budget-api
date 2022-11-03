@@ -1,5 +1,4 @@
-export interface User {
-    id: string;
+export interface UserRequest {
     firstName: string;
     lastName: string;
     role: string;
@@ -7,5 +6,5 @@ export interface User {
     password: string;
     confirmPassword: string;
     paidMoney: number;
-    dept: number;
+    dept: number;  
 }

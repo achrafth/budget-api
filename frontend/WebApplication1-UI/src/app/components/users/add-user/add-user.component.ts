@@ -10,6 +10,8 @@ import { UsersService } from 'src/app/Services/users/users.service';
 })
 export class AddUserComponent implements OnInit {
 
+  role = ['User', 'Admin'];
+
   addUserRequest: User = {
     id: '',
     firstName: '',
