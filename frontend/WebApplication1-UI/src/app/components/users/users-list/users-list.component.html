@@ -4,20 +4,22 @@
     <table class="responsive-table" *ngIf="users && users.length > 0">
         <thead class="table-header">
           <tr>
-            <th>email</th>
-            <th>name</th>
-            <th >Lastname</th>
-            <th >budget</th>
-            <th>dept</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Paid Money</th>
+            <th>Dept</th>
             <th></th>
           </tr>
         </thead>
         <tbody class="table-row">
           <tr *ngFor="let user of users">
-            <td class="col col-1">{{user.email}}</td>
-            <td class="col col-2">{{user.name}}</td>
-            <td class="col col-3">{{user.lastName}}</td>
-            <td class="col col-4">{{user.budget}}</td>
+            <td class="col col-1">{{user.firstName}}</td>
+            <td class="col col-2">{{user.lastName}}</td>
+            <td class="col col-3">{{user.role}}</td>
+            <td class="col col-4">{{user.email}}</td>
+            <td class="col col-5">{{user.paidMoney}}</td>
             <td class="col col-5">{{user.dept}}</td>
             <td class="col col-6"><button type="button" class="btn"><a [routerLink]="['/users', 'update', user.id]">Update</a></button>
           </tr>

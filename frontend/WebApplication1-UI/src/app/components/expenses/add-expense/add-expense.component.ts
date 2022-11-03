@@ -15,7 +15,7 @@ export class AddExpenseComponent implements OnInit {
   usersNames: string[] = [];
   addExpenseRequest: Expense = {
     expenseId: '',
-    type: '',
+    typeExpense: '',
     dateTime: new Date(),
     total: 0,
     paidBy: ''

@@ -13,9 +13,6 @@ public class UpdateExpenseRequest
     public DateTime DateTime { get; set; }
 
     [Required]
-    public string LastName { get; set; }
-
-    [Required]
     public int Total { get; set; }
 
     [Required]

@@ -1,6 +1,6 @@
 export interface Expense {
     expenseId: string;
-    type: string;
+    typeExpense: string;
     dateTime: Date;
     total: number;
     paidBy: string;

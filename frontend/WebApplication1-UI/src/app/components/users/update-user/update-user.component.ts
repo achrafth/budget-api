@@ -12,10 +12,13 @@ export class UpdateUserComponent implements OnInit {
 
   userDetails: User = {
     id: '',
-    email: '',
-    name: '',
+    firstName: '',
     lastName: '',
-    budget: 0,
+    role: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    paidMoney: 0,
     dept: 0
   }
 

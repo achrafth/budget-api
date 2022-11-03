@@ -1,8 +1,11 @@
 export interface User {
     id: string;
-    email: string;
-    name: string;
+    firstName: string;
     lastName: string;
-    budget: number;
+    role: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+    paidMoney: number;
     dept: number;  
 }

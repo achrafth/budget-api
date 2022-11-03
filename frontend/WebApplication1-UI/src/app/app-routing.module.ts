@@ -21,10 +21,6 @@ const routes: Routes = [
     component: UpdateUserComponent
   },
   {
-    path: 'budget',
-    component: UsersListComponent
-  },
-  {
     path: 'expenses',
     component: ExpensesListComponent
   },

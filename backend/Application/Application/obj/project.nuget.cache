@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+FnShF9mIN5Xp9ek6rkcLw7znYYmgynb0xWZCMmD6w8cty5/mSC2mRSWw+0oRUdFmbQl3EkfjDnO3o7eACNNKg==",
+  "dgSpecHash": "g1sTgoQTWGMrxdSOOCBpyPgQCvbOfUT0661WePEfT041p/ZF80xifAkuawBS2r6HIyx67co/M9DfnyNxToEIbg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin-achth\\source\\repos\\Application\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\admin-achth\\source\\repos\\budget-api\\backend\\Application\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin-achth\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\admin-achth\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

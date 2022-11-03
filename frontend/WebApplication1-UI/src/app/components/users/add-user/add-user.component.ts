@@ -12,10 +12,13 @@ export class AddUserComponent implements OnInit {
 
   addUserRequest: User = {
     id: '',
-    email: '',
-    name: '',
+    firstName: '',
     lastName: '',
-    budget: 0,
+    role: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    paidMoney: 0,
     dept: 0
   }
   constructor(private usersService: UsersService, private router: Router) { }

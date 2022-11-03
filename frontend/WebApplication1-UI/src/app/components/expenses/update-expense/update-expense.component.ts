@@ -16,7 +16,7 @@ export class UpdateExpenseComponent implements OnInit {
   usersNames: string[] = [];
   expenseDetails: Expense = {
     expenseId: '',
-    type: '',
+    typeExpense: '',
     dateTime: new Date(),
     total: 0,
     paidBy: ''

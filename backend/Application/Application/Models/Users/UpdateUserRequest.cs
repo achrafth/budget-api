@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations;
 
 public class UpdateUserRequest
 {
-    public string Title { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
 
@@ -25,7 +24,10 @@ public class UpdateUserRequest
         set => _password = replaceEmptyWithNull(value);
     }
 
-    private int _paidMoney = 0;
+    public int PaidMoney { get; set; }
+    public int Dept { get; set; }
+
+    /*private int _paidMoney = 0;
     private int _dept = 0;
     public int PaidMoney
     {
@@ -36,7 +38,7 @@ public class UpdateUserRequest
     {
         get => _dept;
         set => _dept = value;
-    }
+    }*/
 
     private string _confirmPassword;
     [Compare("Password")]
