@@ -62,7 +62,7 @@ public class ExpenseService : IExpenseService
         if (string.IsNullOrEmpty(model.PaidBy))
             throw new AppException("The person who paid for this expense is missing");
 
-        // copy model to user and save
+        // copy model to expense and save
         _mapper.Map(model, expense);
         _context.Expenses.Update(expense);
         _context.SaveChanges();

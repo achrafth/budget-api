@@ -24,7 +24,7 @@ public class UsersController : ControllerBase
     public IActionResult GetUsers()
     {
         var users = _userService.GetAll();
-        return Ok(users);
+        return users != null ? Ok(users) : NotFound();
     }
 
     [HttpGet]

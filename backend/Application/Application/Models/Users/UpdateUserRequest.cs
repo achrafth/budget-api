@@ -27,19 +27,6 @@ public class UpdateUserRequest
     public int PaidMoney { get; set; }
     public int Dept { get; set; }
 
-    /*private int _paidMoney = 0;
-    private int _dept = 0;
-    public int PaidMoney
-    {
-        get => _paidMoney;
-        set => _paidMoney = value;
-    }
-    public int Dept
-    {
-        get => _dept;
-        set => _dept = value;
-    }*/
-
     private string _confirmPassword;
     [Compare("Password")]
     public string ConfirmPassword

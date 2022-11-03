@@ -2,6 +2,7 @@
 
 using Application.Entities;
 using Application.Helpers;
+using Application.Models.Expenses;
 using Application.Models.Users;
 using AutoMapper;
 using BCrypt.Net;
@@ -18,6 +19,9 @@ public interface IUserService
     void Create(CreateUserRequest model);
     void Update(Guid id, UpdateUserRequest model);
     void Delete(Guid id);
+    void AddUserPaidMoney(CreateExpenseRequest model);
+    void UpdateUserPaidMoney(UpdateExpenseRequest model);
+    void UpdateUsersDept();
 }
 
 public class UserService : IUserService
@@ -106,6 +110,38 @@ public class UserService : IUserService
     {
         var user = getUser(id);
         _context.Users.Remove(user);
+        _context.SaveChanges();
+    }
+
+    public void AddUserPaidMoney(CreateExpenseRequest model)
+    {
+        var user = GetByName(model.PaidBy);
+
+        user.PaidMoney += model.Total;
+        _context.Users.Update(user);
+        _context.SaveChanges();
+    }
+
+    public void UpdateUserPaidMoney(UpdateExpenseRequest model)
+    {
+        var user = GetByName(model.PaidBy);
+
+        user.PaidMoney += model.Total;
+        _context.Users.Update(user);
+        _context.SaveChanges();
+    }
+
+    public void UpdateUsersDept()
+    {
+        int rollingPaidMoney = GetUsersBudget();
+        var users = GetAll();
+
+        foreach (var user in users)
+        {
+            user.Dept = user.PaidMoney - (rollingPaidMoney / users.ToArray().Length);
+            _context.Users.Update(user);
+        }
+
         _context.SaveChanges();
     }
 
